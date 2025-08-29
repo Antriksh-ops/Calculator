@@ -1,0 +1,39 @@
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center; 
+  align-content: center;   
+
+
+}
+
+.area{
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+}
+
+
+div.box div{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+.box{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: px 50px ;
+    gap: 5px;
+}
+button{
+    width: 95px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+
+}
+
+h1{
+    text-align: center;
+}
