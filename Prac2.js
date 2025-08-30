@@ -68,3 +68,27 @@ function fact(a){
 let num = prompt("Enter num for factorial: ")
 console.log(`The Factorial of ${num} is ${fact(num)}`)
 */
+
+// isPrime(n)
+
+function isPrime(n){
+    if(n <= 1) return false;
+
+    for(let i = 2; i <= Math.sqrt(n); i++){
+        if(n % i == 0){
+            return false;
+        }
+        
+    }
+
+    return true;
+}
+
+let num = parseInt(prompt("Enter number to check: "))
+if(isPrime(num)){
+    console.log(`The number ${num} is prime`)
+
+}
+else{
+    console.log(`The number ${num} is not prime number`)
+}
