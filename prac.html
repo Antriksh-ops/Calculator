@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Manipulation</title>
 </head>
+
 <body>
     <h1 id="title">
-        this is a heading
+        Counter: <span id="count">0</span>
     </h1>
     <p class="message">
         this is a paragraph
     </p>
-    <button>Click me</button>
-    <source src="Dom.js" type="">
+    <button id="inc">increase</button>
+    <button id="reset">reset</button>
+
+    <script>
+        let count = 0;
+        let countDisplay = document.getElementById("count");
+        let incBtn = document.getElementById("inc");
+        let resetBtn = document.getElementById("reset");
+        let msg = document.querySelector(".message");
+
+        incBtn.addEventListener("click", function () {
+            count++;
+            countDisplay.textContent = count;
+            if (count == 50) {
+                msg.textContent = "Congrats you have made it to half century";
+            }
+            else if (count == 100) {
+                msg.textContent = "Congrats you have made it to  century";
+            }
+        });
+
+        resetBtn.addEventListener("click", function () {
+            count = 0;
+            countDisplay.textContent = count;
+            msg.textContent = "Start the counter";
+
+        });
+
+    </script>
 </body>
+
 </html>

@@ -1,8 +1,3 @@
-let title = document.getElementById("title")
-console.log(title)
+let count = 0;
 
-let message = document.querySelector(".message")
-console.log(message)
-
-let button = document.querySelector("button")
-console.log(button)
+let countDisplay = doc
