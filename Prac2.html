@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js prac</title>
 </head>
+
 <body>
-    <h1> This is a heading</h1>
+    <h1 class="title"> This is a heading</h1>
     <p class="Message"> this is a paragraph</p>
     <button id="btn">Click to change para</button>
+    <button id="big">big</button>
+    <button id="small">small</button>
 </body>
 
 <script>
     let body = document.body;
     let count = 0;
-    let title = document.querySelector("h1")
+    let title = document.querySelector(".title")
     let msg = document.querySelector(".Message")
     let button = document.getElementById("btn");
+    let big = document.getElementById("big")
+    let small = document.getElementById("small")
 
-    button.addEventListener("click",function(){
+    button.addEventListener("click", function () {
         msg.textContent = "the paragraph was changed!!";
         count++;
-        if(count % 2 == 0){
+        if (count % 2 == 0) {
             msg.style.color = "blue";
+            msg.style.display = "none";
         }
-        else{
+        else {
             msg.style.color = "red";
+            msg.style.display = "block";
         }
+
+
     });
 
+    big.addEventListener("click", function () {
+        let currentSize = parseInt(window.getComputedStyle(title).fontSize);
+        let newSize = currentSize + 10;
+        title.style.fontSize = newSize + "px";
+    })
+
+    small.addEventListener("click", function () {
+        let currentSize = parseInt(window.getComputedStyle(title).fontSize);
+        let newSize = currentSize - 10;
+        title.style.fontSize = newSize + "px";
+    })
+
+
 </script>
+
 </html>
