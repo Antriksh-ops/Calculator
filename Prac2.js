@@ -25,6 +25,7 @@ let num1 = prompt("Enter num1: ")
 console.log(`the square of ${num1} is ${sqr(num1)}`)
 */
 
+/*
 function Calculator(a,b,operator){
     switch (operator) {
         case '+':
@@ -53,3 +54,17 @@ let num1 = parseFloat(prompt("Enter num1: "));
 let num2 = parseFloat(prompt("Enter num2: "));
 let operator = prompt("Enter operator (+, -, *, /): ");
 console.log(`The result is ${Calculator(num1, num2, operator)}`);
+*/
+
+// factorial function
+/*
+function fact(a){
+    if(a == 1 || a == 0){
+        return 1;
+    }
+    return a * fact(a - 1);
+}
+
+let num = prompt("Enter num for factorial: ")
+console.log(`The Factorial of ${num} is ${fact(num)}`)
+*/
